@@ -29,7 +29,7 @@ h1 {
 
 
 main, footer > * , nav ul, header h1 {
-    max-width: clamp(375px, 90vw, 1700px);
+    max-width: clamp(340px, 90vw, 1700px);
     margin: 0 auto;
 }
 
@@ -171,14 +171,15 @@ form {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: clamp(350px, 40%, 800px);
+    width: clamp(340px, 40%, 800px);
     margin-bottom: 4rem;
 }
 input, textarea {
     margin-bottom: .5rem;
     padding: .5rem;
     border-radius: 6px;
-    border: solid black 1px;
+    border: none;
+    background-color:rgb(237, 237, 237);
 }
 
 button {

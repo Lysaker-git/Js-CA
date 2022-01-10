@@ -24,12 +24,12 @@ form.addEventListener("submit", (event) => {
     }
     else {
         hidden[0].style.display = "none";
-        nameInput.style.border = "solid black 1px";
+        nameInput.style.border = "none";
     };
 
     if (validateMail(emailInput.value)) {
         hidden[1].style.display = "none";
-        emailInput.style.border = "solid black 1px";
+        emailInput.style.border = "none";
     }
     else {
         hidden[1].style.display = "block";
@@ -42,7 +42,7 @@ form.addEventListener("submit", (event) => {
     }
     else {
         hidden[2].style.display = "none";
-        addressInput.style.border = "solid black 1px";
+        addressInput.style.border = "none";
     };
 
     if (validateData(textareaInput.value, 9)) {
@@ -51,7 +51,7 @@ form.addEventListener("submit", (event) => {
     }
     else {
         hidden[3].style.display = "none";
-        textareaInput.style.border = "solid black 1px";
+        textareaInput.style.border = "none";
     };
 
 });
