@@ -2,8 +2,10 @@ const detailsContainer = document.querySelector(".card-containers__details");
 const queryString = document.location.search;
 const parameters = new URLSearchParams(queryString);
 
+
 const id = parameters.get("name");
 const API_URL = "https://anime-facts-rest-api.herokuapp.com/api/v1/" + id;
+
 
 async function getFacts () {
 
@@ -17,6 +19,7 @@ async function getFacts () {
         let image = json.img;
         let name = id.replace(/_/g, " ");
         let returnedFacts = "";
+        document.title = name;
         arrayData.forEach(fact => {
             returnedFacts += "<p>" + fact.fact_id + ": " + fact.fact + "</p>";
         });
