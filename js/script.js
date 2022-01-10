@@ -11,7 +11,6 @@ async function getFacts () {
         cardContainer.innerHTML = "";
         for (let i = 0; i < arrayData.length; i++) {
             let name = arrayData[i].anime_name;
-            // replace function to replace underscores were looked up on Stack overflow to accomplish.
             let displayName = name.replace(/_/g, " ");
             let img = arrayData[i].anime_img;
             let id = arrayData[i].anime_id;
@@ -33,8 +32,8 @@ async function getFacts () {
             <p>${error}</p>
         </div>
         `
-    }
-}
+    };
+};
 
 getFacts();
 

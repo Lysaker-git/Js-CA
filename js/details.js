@@ -12,15 +12,15 @@ async function getFacts () {
         const json = await response.json();
         const arrayData = json.data;
         
-        detailsContainer.innerHTML = ""
-        
-        let image = json.img
+        detailsContainer.innerHTML = "";
+
+        let image = json.img;
         let name = id.replace(/_/g, " ");
         let returnedFacts = "";
         arrayData.forEach(fact => {
-            // console.log(fact)
             returnedFacts += "<p>" + fact.fact_id + ": " + fact.fact + "</p>";
         });
+
         detailsContainer.innerHTML += `
         <div class="card">
             <img src="${image}" alt="Image of ${name}">
@@ -37,8 +37,7 @@ async function getFacts () {
             <p>${error}</p>
         </div>
         `
-    }
-}
+    };
+};
 
 getFacts();
-

@@ -1,22 +1,22 @@
 const form = document.querySelector("#form");
+
 const nameInput = document.querySelector("#name");
 const emailInput = document.querySelector("#email");
 const addressInput = document.querySelector("#address");
 const textareaInput = document.querySelector("#txtarea");
+
 const hidden = document.querySelectorAll(".hidden");
-// Using qsa so i can all the error p's in a array.
-console.log(nameInput)
-console.log(emailInput)
-console.log(addressInput)
-console.log(textareaInput)
-console.log(hidden)
+// Using QSA so i can have all the error p's in a array. This makes the code a little more unreadable but i wanted to try it this way to get experience with QSA as well.
+// In other words, i know i could use QS to target every p, but i opted out of it so i could have 1 const instead of 4 as well as keep the same classname.
+// I also understand the downsides if the elements on the page were to switch places.
+// P[0] = Name, P[1] = Email, P[2] = Address, P[3] = Txtarea
 
 
-// Looked into MDN because event.preventdefault is decrepated by VSCode. Thats why im using a arrowfunction passing event. As i have used arrow functions before i do understand how they work. 
+// Looked into MDN because event.preventdefault is decrepated by VSCode. Thats why im passing event into the function. 
 
+// form.addEventListener("submit", checkingValues (event) {});
 form.addEventListener("submit", (event) => {
     event.preventDefault();
-    console.log("Hello");
 
     if (validateData(nameInput.value, 1)) {
         hidden[0].style.display = "block";
@@ -53,7 +53,6 @@ form.addEventListener("submit", (event) => {
         hidden[3].style.display = "none";
         textareaInput.style.border = "none";
     };
-
 });
 
 function validateData(value, chars) {
@@ -69,3 +68,5 @@ function validateMail(email) {
     const match = regEx.test(email);
     return match;
 };
+
+// Fun fact, i actually went in to understand RegEx during this CA so i knew what it meant. Not as complicated to write as i thought.. 
