@@ -167,7 +167,7 @@ footer a {
 
 /* CONTACT */
 
-form {
+.hideform {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -206,6 +206,31 @@ textarea {
     overflow-y: scroll;
 }
 
+.sucsess {
+    display: none;
+    padding: 2rem;
+    margin-bottom: 4rem;
+    width: clamp(340px, 40%, 800px);
+    background: linear-gradient(.3turn, var(--accent-color), var(--main-color));
+    color: white;
+    animation: background-change 5s infinite;
+    background-size: 300%;
+    border-radius: 10px;
+}
+
+.sucsess * {
+    color: #fff
+}
+
+.sucsess a {
+    display: block;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.753);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+    width: fit-content;
+    border-radius: 5px;
+}
 /* LOADING ANIMATION */
 
 .loading {
@@ -228,3 +253,4 @@ textarea {
         background-position: 100% 75%;
     }
 }
+
