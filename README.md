@@ -45,3 +45,6 @@ If you want to help the project you can clone and push into a seperate branch..
 [My LinkedIn page](https://www.linkedin.com/in/robin-lysaker-36295517b/)
 or send via my Portfolio: 
 https://portfolio-rsl.netlify.app/#contact
+
+## Page Location: 
+[Anime facts](https://sharp-thompson-c35ea2.netlify.app/index.html)
